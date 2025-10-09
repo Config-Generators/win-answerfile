@@ -284,8 +284,8 @@
 
 			let userAccountXml = '';
 			if (usernameInput) {
-				userAccountXml = 
-			`<UserAccounts>
+				userAccountXml = `
+			<UserAccounts>
 				<LocalAccounts>
 					<LocalAccount wcm:action="add">
 						<Name>${usernameInput}</Name>
@@ -360,8 +360,7 @@
 				<HideOnlineAccountScreens>true</HideOnlineAccountScreens>
 				<HideWirelessSetupInOOBE>true</HideWirelessSetupInOOBE>
 				<ProtectYourPC>${protectYourPCValue}</ProtectYourPC>
-			</OOBE>
-			${userAccountXml}
+			</OOBE>${userAccountXml}
 		</component>
 	</settings>
 	${networkComponentsXml}

@@ -219,15 +219,14 @@
                     </p>
                     <ol class="list-decimal list-inside space-y-2">
                         <li>Speichern Sie die generierte XML-Datei als <code class="px-1 py-0.5 rounded" style="background-color: var(--bg-light);">unattend.xml</code> (ohne das "auto").</li>
-                        <li>Erstellen Sie auf dem USB-Stick im Ordner <code class="px-1 py-0.5 rounded" style="background-color: var(--bg-light);">sources</code> einen Ordner namens <code class="px-1 py-0.5 rounded" style="background-color: var(--bg-light);">\$OEM\$</code> (mit den Dollarzeichen!).</li>
+                        <li>Erstellen Sie auf dem USB-Stick im Ordner <code class="px-1 py-0.5 rounded" style="background-color: var(--bg-light);">sources</code> einen Ordner namens <code class="px-1 py-0.5 rounded" style="background-color: var(--bg-light);">$OEM$\</code> (mit den Dollarzeichen!).</li>
                         <li>Erstellen Sie in diesem Ordner einen weiteren Ordner namens <code class="px-1 py-0.5 rounded" style="background-color: var(--bg-light);">$$\</code>.</li>
-                        <li>Erstellen Sie in diesem Ordner einen weiteren Ordner namens <code class="px-1 py-0.5 rounded" style="background-color: var(--bg-light);">Panther</code>.</li>
+                        <li>Erstellen Sie in diesem Ordner einen weiteren Ordner namens <code class="px-1 py-0.5 rounded" style="background-color: var(--bg-light);">Panther\</code>.</li>
                         <li>Kopieren Sie die <code class="px-1 py-0.5 rounded" style="background-color: var(--bg-light);">unattend.xml</code>-Datei in den Ordner <code class="px-1 py-0.5 rounded" style="background-color: var(--bg-light);">sources\$OEM$\$$\Panther</code>.</li>
                         <li>
                             Stellen Sie sicher, dass die Dateistruktur wie folgt aussieht: 
                             <code class="block mt-2 px-3 py-2 rounded-md font-mono text-sm" style="background-color: var(--bg-light);">
                                 USB_Stick:\<br>
-                                ├── install.wim<br>
                                 ├── boot\<br>
                                 └── **sources**<br>
                                 &nbsp;&nbsp;&nbsp;└── **$OEM$**<br>
@@ -239,10 +238,6 @@
                         <li>Booten Sie vom USB-Stick. Der Installer wird nun die <code class="px-1 py-0.5 rounded" style="background-color: var(--bg-light);">unattend.xml</code>-Datei aus der OEM-Struktur finden und verwenden.</li>
                     </ol>
 
-                    <div class="bg-yellow-900/50 border-l-4 border-yellow-400 p-4 rounded-r-lg">
-                        <p class="font-bold text-yellow-300">Wichtiger Hinweis</p>
-                        <p class="text-yellow-200">Wenn Sie Software zur Installation ausgewählt haben, kann die erste Anmeldung am neuen Windows-System einige Minuten länger dauern. Die Programme werden im Hintergrund heruntergeladen und installiert. Bitte haben Sie etwas Geduld.</p>
-                    </div>
                 </div>
             </div>
         </main>
